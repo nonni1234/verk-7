@@ -1,0 +1,18 @@
+body {
+    background: darkcyan;
+}
+fieldset {
+    width: max-content;
+}
+
+#form {
+    display: flex;
+    flex-flow: column;
+    width: max-content;
+}
+#form input {
+    margin: 6px ;
+}
+#submit {
+    padding: 5px;
+}

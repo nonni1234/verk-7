@@ -1,7 +1,23 @@
 {% extends "default.html" %}
-{% block title %}Results{% endblock %}
+{% block title %}Admin Síða{% endblock %}
 
 {% block content %}
-Admin síða
-Log = {{ log }}
+<h2>Velkomin/nn {{ nafn }}</h2>
+<div>
+    <table>
+        <tr>
+            <td>Username</td>
+            <td>Email</td>
+            <td>Password</td>
+        </tr>
+        {% for info in results %}
+        <tr>
+            <td>{{ info["user_name"] }}</td>
+            <td>{{ info["user_email"] }}</td>
+            <td>{{ info["user_password"] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+<a href="/signout"> <button>Sign Out</button> </a>
 {% endblock %}
